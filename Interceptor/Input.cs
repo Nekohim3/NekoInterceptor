@@ -107,7 +107,7 @@ namespace Interceptor
             IsLoaded = false;
             InterceptionDriver.SetFilter(_context, InterceptionDriver.IsKeyboard, (ushort) KeyboardFilterMode.All);
             InterceptionDriver.SetFilter(_context, InterceptionDriver.IsMouse, (ushort) MouseFilterMode.All);
-            _callbackThread.Join();
+            _callbackThread.Abort();
             InterceptionDriver.DestroyContext(_context);
         }
 
