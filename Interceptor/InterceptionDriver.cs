@@ -43,10 +43,10 @@ namespace Interceptor
         RightUp = 0x08,
         MiddleDown = 0x10,
         MiddleUp = 0x20,
-        LeftExtraDown = 0x40,
-        LeftExtraUp = 0x80,
-        RightExtraDown = 0x100,
-        RightExtraUp = 0x200,
+        X1Down = 0x40,
+        X1Up = 0x80,
+        X2Down = 0x100,
+        X2Up = 0x200,
         ScrollVertical = 0x400,
         ScrollUp = 0x400,
         ScrollDown = 0x400,
@@ -55,22 +55,25 @@ namespace Interceptor
         ScrollRight = 0x800
     }
 
-    public enum MouseButton : ushort
+    [Flags]
+    public enum MouseKey : ushort
     {
-        Moving,
-        Left,
-        Right,
-        Middle,
-        LeftExtra,
-        RightExtra,
-        Scroll
+        None = 0xff,
+        Moving = 0x00,
+        Left   = 0X01,
+        Right  = 0x02,
+        Middle = 0x04,
+        X1     = 0x08,
+        X2     = 0x10,
+        Scroll = 0x20
     }
 
+    [Flags]
     public enum MouseDir : ushort
     {
-        None,
-        Up,
-        Down,
+        None = 0xff,
+        Down = 0x00,
+        Up   = 0x01
     }
 
     [Flags]
@@ -84,10 +87,10 @@ namespace Interceptor
         RightUp              = 0x08,
         MiddleDown           = 0x10,
         MiddleUp             = 0x20,
-        LeftExtraDown        = 0x40,
-        LeftExtraUp          = 0x80,
-        RightExtraDown       = 0x100,
-        RightExtraUp         = 0x200,
+        X1Down        = 0x40,
+        X1Up          = 0x80,
+        X2Down       = 0x100,
+        X2Up         = 0x200,
         MouseWheelVertical   = 0x400,
         MouseWheelHorizontal = 0x800,
         MouseMove            = 0x1000

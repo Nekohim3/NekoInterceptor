@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converter.cs" />
     <Compile Include="InterceptionDriver.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="KeyPressedEventArgs.cs" />
