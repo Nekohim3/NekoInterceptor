@@ -367,52 +367,52 @@ namespace Interceptor
             }
         }
 
-        public MouseState GetStateFromButtonAndDir(MouseButton button, MouseDir dir)
-        {
-            if (dir == MouseDir.Down)
-            {
-                switch (button)
-                {
-                    case MouseButton.Left:
-                        return MouseState.LeftDown;
-                    case MouseButton.Right:
-                        return MouseState.RightDown;
-                    case MouseButton.Middle:
-                        return MouseState.MiddleDown;
-                    case MouseButton.LeftExtra:
-                        return MouseState.LeftExtraDown;
-                    case MouseButton.RightExtra:
-                        return MouseState.RightExtraDown;
-                    case MouseButton.Scroll:
-                        return MouseState.ScrollDown;
-                }
-            }
-            else if(dir == MouseDir.Up)
-            {
-                switch (button)
-                {
-                    case MouseButton.Left:
-                        return MouseState.LeftUp;
-                    case MouseButton.Right:
-                        return MouseState.RightUp;
-                    case MouseButton.Middle:
-                        return MouseState.MiddleUp;
-                    case MouseButton.LeftExtra:
-                        return MouseState.LeftExtraUp;
-                    case MouseButton.RightExtra:
-                        return MouseState.RightExtraUp;
-                    case MouseButton.Scroll:
-                        return MouseState.ScrollUp;
-                }
-            }
-            else if(dir == MouseDir.Down)
-            {
+        //public MouseState GetStateFromButtonAndDir(MouseButton button, MouseDir dir)
+        //{
+        //    if (dir == MouseDir.Down)
+        //    {
+        //        switch (button)
+        //        {
+        //            case MouseButton.Left:
+        //                return MouseState.LeftDown;
+        //            case MouseButton.Right:
+        //                return MouseState.RightDown;
+        //            case MouseButton.Middle:
+        //                return MouseState.MiddleDown;
+        //            case MouseButton.LeftExtra:
+        //                return MouseState.LeftExtraDown;
+        //            case MouseButton.RightExtra:
+        //                return MouseState.RightExtraDown;
+        //            case MouseButton.Scroll:
+        //                return MouseState.ScrollDown;
+        //        }
+        //    }
+        //    else if(dir == MouseDir.Up)
+        //    {
+        //        switch (button)
+        //        {
+        //            case MouseButton.Left:
+        //                return MouseState.LeftUp;
+        //            case MouseButton.Right:
+        //                return MouseState.RightUp;
+        //            case MouseButton.Middle:
+        //                return MouseState.MiddleUp;
+        //            case MouseButton.LeftExtra:
+        //                return MouseState.LeftExtraUp;
+        //            case MouseButton.RightExtra:
+        //                return MouseState.RightExtraUp;
+        //            case MouseButton.Scroll:
+        //                return MouseState.ScrollUp;
+        //        }
+        //    }
+        //    else if(dir == MouseDir.Down)
+        //    {
                 
-            }
-            return MouseState.LeftUp;
-        }
+        //    }
+        //    return MouseState.LeftUp;
+        //}
 
-        public void SendMouseEvent(MouseButton button, MouseDir dir) => SendMouseEvent(GetStateFromButtonAndDir(button, dir));
+        //public void SendMouseEvent(MouseButton button, MouseDir dir) => SendMouseEvent(GetStateFromButtonAndDir(button, dir));
 
         public void SendMouseEvent(MouseState state)
         {
