@@ -1,5 +1,6 @@
 ﻿//#define WINDOWSFORM //Uncomment to enable the use of Windows form functions. (Does not work on Console apps).
 using System;
+using System.IO;
 #if WINDOWSFORM
 using System.Drawing;
 using System.Windows.Forms;
@@ -107,7 +108,6 @@ namespace Interceptor
             IsLoaded = false;
             InterceptionDriver.SetFilter(_context, InterceptionDriver.IsKeyboard, (ushort) KeyboardFilterMode.All);
             InterceptionDriver.SetFilter(_context, InterceptionDriver.IsMouse, (ushort) MouseFilterMode.All);
-            _callbackThread.Abort();
             InterceptionDriver.DestroyContext(_context);
         }
 
